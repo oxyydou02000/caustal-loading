@@ -10,10 +10,21 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: linear-gradient(135deg, #1e293b 0%, #0ea5e9 100%);
       font-family: 'Montserrat', Arial, sans-serif;
       color: #fff;
       overflow: hidden;
+      /* Fond image floutée */
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat fixed;
+      position: relative;
+    }
+    /* Overlay dégradé bleu foncé */
+    body::before {
+      content: "";
+      position: fixed;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: linear-gradient(120deg, #0a192fbb 0%, #0ea5e9cc 100%);
+      z-index: 0;
+      backdrop-filter: blur(6px);
     }
     .center {
       position: absolute;
@@ -22,6 +33,7 @@
       text-align: center;
       width: 90vw;
       max-width: 500px;
+      z-index: 1;
     }
     .logo {
       width: 120px;
@@ -34,6 +46,8 @@
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
+      box-shadow: 0 8px 32px #0006;
+      overflow: hidden;
     }
     .logo img {
       width: 90px;
@@ -42,7 +56,7 @@
       object-fit: cover;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2.7em;
       font-weight: 900;
       margin: 0 0 0.2em 0;
       letter-spacing: 2px;
@@ -55,15 +69,18 @@
       width: 80px; height: 80px;
       animation: spin 1.2s linear infinite;
       margin: 2em auto 1em auto;
+      box-shadow: 0 4px 24px #0006;
     }
     @keyframes spin { 100% { transform: rotate(360deg); } }
     .infos {
       font-size: 1.1em;
       margin-top: 1em;
-      background: #0005;
-      border-radius: 12px;
-      padding: 1em;
-      box-shadow: 0 2px 12px #0004;
+      background: rgba(10,25,47,0.85);
+      border-radius: 18px;
+      padding: 1.2em 1em 1.2em 1em;
+      box-shadow: 0 2px 24px #0005;
+      border: 1.5px solid #0ea5e9;
+      backdrop-filter: blur(2px);
     }
     .discord {
       color: #0ea5e9;
@@ -72,6 +89,12 @@
       transition: color 0.2s;
     }
     .discord:hover { color: #38bdf8; }
+    /* Animation subtile du fond */
+    @keyframes bgmove {
+      0% { background-position: 50% 50%; }
+      100% { background-position: 60% 60%; }
+    }
+    body { animation: bgmove 20s ease-in-out infinite alternate; }
   </style>
 </head>
 <body>
