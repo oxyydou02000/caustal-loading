@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Caustal RP - Chargement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e293b 0%, #0ea5e9 100%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+    .center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90vw;
+      max-width: 500px;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: #fff2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .logo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: 900;
+      margin: 0 0 0.2em 0;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 24px #0008;
+    }
+    .loader {
+      border: 8px solid #fff3;
+      border-top: 8px solid #0ea5e9;
+      border-radius: 50%;
+      width: 80px; height: 80px;
+      animation: spin 1.2s linear infinite;
+      margin: 2em auto 1em auto;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    .infos {
+      font-size: 1.1em;
+      margin-top: 1em;
+      background: #0005;
+      border-radius: 12px;
+      padding: 1em;
+      box-shadow: 0 2px 12px #0004;
+    }
+    .discord {
+      color: #0ea5e9;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .discord:hover { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="logo">
+      <!-- Mets ici ton logo (remplace le lien si tu veux) -->
+      <img src="https://i.imgur.com/0y0y0y0.png" alt="Logo Caustal RP">
+    </div>
+    <h1>Caustal RP</h1>
+    <div class="loader"></div>
+    <div class="infos">
+      <p>Chargement du serveur...<br>
+      Merci de patienter !</p>
+      <p>Discord : <a class="discord" href="https://discord.gg/tonlien" target="_blank">discord.gg/tonlien</a></p>
+      <p>Workshop : <a class="discord" href="https://steamcommunity.com/sharedfiles/filedetails/?id=xxxxx" target="_blank">Clique ici</a></p>
+    </div>
+  </div>
+</body>
+</html>
